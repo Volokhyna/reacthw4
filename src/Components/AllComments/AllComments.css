@@ -1,0 +1,6 @@
+.all-comments-router {
+    border: 3px solid darkgreen;
+    margin: 5px;
+    box-sizing: border-box;
+    min-height: 30px;
+}
