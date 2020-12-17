@@ -4,4 +4,8 @@ export default class UserService {
     async comments() {
         return await fetch(this.url).then(value => value.json())
     }
+
+    getComment(id) {
+        return fetch(this.url + '/' + id).then(value => value.json())
+    }
 }

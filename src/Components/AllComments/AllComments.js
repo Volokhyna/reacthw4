@@ -29,7 +29,8 @@ class AllComments extends Component {
                 <div className={'all-comments-router'}>
                     <Switch>
                         <Route path={`${url}/:id`} exact render={(props) => {
-                            return <FullComment {...props}/>;
+                            let {match:{params:{id}}} = props;
+                            return <FullComment commentId={id} key={id}/>;
                         }}/>
                     </Switch>
                 </div>

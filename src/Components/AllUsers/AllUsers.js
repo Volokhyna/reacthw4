@@ -28,8 +28,9 @@ class AllUsers extends Component {
 
                 <div className={'all-users-router'}>
                         <Switch>
-                            <Route path={`${url}/:id`} exact render={(props) => {
-                                return <FullUser {...props}/>;
+                            <Route path={`${url}/:id`} render={(props) => {
+                                let {match:{params:{id}}} = props;
+                                return <FullUser userId={id} key={id}/>;
                             }}/>
                         </Switch>
                 </div>

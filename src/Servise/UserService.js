@@ -4,4 +4,8 @@ export default class UserService {
     async users() {
         return await fetch(this.url).then(value => value.json())
     }
+
+    getUser(id) {
+        return fetch(this.url + '/' + id).then(value => value.json())
+    }
 }

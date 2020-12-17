@@ -10,9 +10,12 @@ class App extends Component {
         return (
             <div>
                 <Router>
-                    <div> <Link to={'/users'}> Users </Link> </div>
-                    <div> <Link to={'/posts'}> Posts </Link> </div>
-                    <div> <Link to={'/comments'}> Comments </Link> </div>
+                    <ul>
+                        <li> <Link to={'/users'}> Users </Link> </li>
+                        <li> <Link to={'/posts'}> Posts </Link> </li>
+                        <li> <Link to={'/comments'}> Comments </Link> </li>
+                    </ul>
+
                     <div className={'border'}>
                         <Switch>
                             <Route path={'/users'} render={() => {return <AllUsers/>}}/>
