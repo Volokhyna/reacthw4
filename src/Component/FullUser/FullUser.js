@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import UserService from "../../Servise/UserService";
+import {Link, Route, withRouter} from "react-router-dom";
+import './FullUser.css'
+import UserPosts from "../UserPosts/UserPosts";
 
 class FullUser extends Component {
     state = {user: null};
@@ -14,15 +17,23 @@ class FullUser extends Component {
 
     render() {
         let {user} = this.state;
-        let {userId} = this.props;
+        let {match: {url}, userId} = this.props;
+
 
         return (
             <div>
-                {userId}
-                {user && <div> {user.name} </div>}
+                {user && <div> {user.id} - {user.name} - <Link to={url + '/posts'}> Show user posts </Link> </div>}
+
+                <div className={'box-posts'}>
+                    <Route path={url + '/posts'} render={() => {
+                        return <UserPosts userId={userId} key={userId}/>;
+                    }}/>
+                </div>
+
             </div>
+
         );
     }
 }
 
-export default FullUser;
+export default withRouter(FullUser);
