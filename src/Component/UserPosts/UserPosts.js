@@ -21,7 +21,7 @@ class UserPosts extends Component {
                         <div key={post.id}>
                             <ul>
                                 <li>
-                                    1. {post.title} - 2. {post.body}
+                                     {post.title} - {post.body}
                                 </li>
                             </ul>
                         </div> )
