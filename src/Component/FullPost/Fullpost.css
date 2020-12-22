@@ -1,0 +1,6 @@
+.box-comments {
+    border: 3px solid deeppink;
+    margin: 3px;
+    box-sizing: border-box;
+    min-height: 30px;
+}

@@ -27,7 +27,7 @@ class AllPosts extends Component {
                 }
                 <div className={'all-posts-router'}>
                     <Switch>
-                        <Route path={`${url}/:id`} exact render={(props) => {
+                        <Route path={`${url}/:id`} render={(props) => {
                             let {match:{params:{id}}} = props;
                             return <FullPost postId={id} key={id}/>;
                         }}/>

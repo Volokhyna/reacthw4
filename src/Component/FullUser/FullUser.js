@@ -19,7 +19,6 @@ class FullUser extends Component {
         let {user} = this.state;
         let {match: {url}, userId} = this.props;
 
-
         return (
             <div>
                 {user && <div> {user.id} - {user.name} - <Link to={url + '/posts'}> Show user posts </Link> </div>}

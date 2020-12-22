@@ -6,7 +6,7 @@ class Post extends Component {
         let {item, match:{url}} = this.props;
         return (
             <div>
-                {item.userId} - {item.title} - <button> <Link to={`${url}/${item.id}`}> Chose </Link> </button>
+                {item.title} - <button> <Link to={`${url}/${item.id}`}> Open body </Link> </button>
             </div>
         );
     }
